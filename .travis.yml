@@ -1,4 +1,8 @@
-language: node_js
+anguage: node_js
+sudo: false
 node_js:
- - "stable"
- script: gulp travis
+  - 10.1
+install:
+  - cd istanbul-mocha && npm install && cd ..
+script:
+  - cd istanbul-mocha && npm test
